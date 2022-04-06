@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aula_30_03</string>
+    <string name="comprar_fruta">Comprou mais uma fruta</string>
+    <string name="comprar_legume">Comprou mais um legume</string>
+    <string name="botao_comprar_fruta">Comprar Fruta</string>
+    <string name="botao_comprar_legume">Comprar Legume</string>
+    <string name="total_compra">O total da compra é %1$.2f</string>
+</resources>

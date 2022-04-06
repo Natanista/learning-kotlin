@@ -1,0 +1,107 @@
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="SPTECH App"
+                android:textColor="@color/black"
+                android:textSize="48sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="E-mail"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:hint="Digite seu melhor e-mail"
+                android:id="@+id/et_email"
+                android:inputType="textEmailAddress"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:text="Senha"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:hint="Digite sua senha"
+                android:id="@+id/et_password"
+                android:inputType="textPassword"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+            <TextView
+                android:id="@+id/tvErroLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login e/ou senha estão incorretos"
+                android:visibility="gone"
+                android:textColor="@color/primary_red"
+                />
+
+            <Button
+                android:backgroundTint="@color/primary_green"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:onClick="entrar"
+                android:text="Entrar"
+                android:textAllCaps="false" />
+
+            <Button
+                android:backgroundTint="@color/primary_blue"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:onClick="cadastrar"
+                android:text="Cadastrar"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Powered by SPTECH" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="v1.0.2.4" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

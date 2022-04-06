@@ -10,24 +10,115 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        android:padding="8dp" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello, World!" />
+            android:layout_marginBottom="8dp"
+            android:text="Eleições SPTECH 2022"
+            android:textSize="24dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            >
+            <EditText
+                android:id="@+id/etNomeCandidato1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nome candidato 1"
+                android:inputType="text"
+                />
+            <EditText
+                android:id="@+id/etNomeCandidato2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nome candidato 2"
+                android:inputType="text"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            >
+            <EditText
+                android:id="@+id/etVotosCandidato1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Votos candidato 1"
+                android:inputType="number"
+                />
+            <EditText
+                android:id="@+id/etVotosCandidato2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Votos candidato 2"
+                android:inputType="number"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvResultado1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/primary_red"
+
+                />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tvResultado2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/primary_purple"
+                />
+
+
+
+        </LinearLayout>
 
         <Button
-            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/btn_nova_votacao"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="clique em mim"
+            android:onClick="novaVotacao"
+            android:text="Nova votação"
             android:textAllCaps="false"
-            android:onClick="speakSomething"></Button>
+            android:backgroundTint="@color/primary_green"
+            />
+
+        <Button
+            android:id="@+id/btn_apurar_votacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="apurar"
+            android:text="Apurar votação"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/primary_blue"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
